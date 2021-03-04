@@ -7,19 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CadastroUIv3._0
 {
     public partial class Form1 : Form
     {
+        Conexao conexao = new Conexao();
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "admin" && txtSenha.Text == "admin")
+            string Query = "SELECT * FROM usuario WHERE usuario ='" + txtUserName.Text + "'and senha='" + txtSenha.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(Query, conexao.AbrirConexao());
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
             {
                 new Form2().Show();
                 this.Hide();
@@ -30,7 +38,7 @@ namespace CadastroUIv3._0
                 txtUserName.Clear();
                 txtSenha.Clear();
                 txtUserName.Focus();
-            }
+            }            
         }
 
         private void BtnLimparcampos_Click(object sender, EventArgs e)
