@@ -47,8 +47,8 @@ namespace CadastroUIv3._0
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -56,16 +56,18 @@ namespace CadastroUIv3._0
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblCadAlunos = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtCep = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtRua = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblEndereço = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -255,28 +257,29 @@ namespace CadastroUIv3._0
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações";
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(546, 576);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(546, 576);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(92, 30);
+            this.btnCadastrar.TabIndex = 6;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(653, 576);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(653, 576);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(92, 30);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // groupBox2
             // 
@@ -349,90 +352,110 @@ namespace CadastroUIv3._0
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txtComplemento);
+            this.groupBox3.Controls.Add(this.txtNumero);
+            this.groupBox3.Controls.Add(this.txtCep);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.txtCidade);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtBairro);
+            this.groupBox3.Controls.Add(this.txtEstado);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.txtEndereco);
+            this.groupBox3.Controls.Add(this.txtRua);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.lblEndereço);
-            this.groupBox3.Location = new System.Drawing.Point(12, 314);
+            this.groupBox3.Location = new System.Drawing.Point(12, 300);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(345, 293);
+            this.groupBox3.Size = new System.Drawing.Size(345, 326);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Endereço";
             // 
-            // textBox5
+            // txtComplemento
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(38, 80);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(65, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtComplemento.BackColor = System.Drawing.Color.White;
+            this.txtComplemento.Location = new System.Drawing.Point(109, 120);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(223, 20);
+            this.txtComplemento.TabIndex = 12;
             // 
-            // textBox4
+            // txtNumero
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(51, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(221, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtNumero.BackColor = System.Drawing.Color.White;
+            this.txtNumero.Location = new System.Drawing.Point(38, 80);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(65, 20);
+            this.txtNumero.TabIndex = 12;
+            // 
+            // txtCep
+            // 
+            this.txtCep.BackColor = System.Drawing.Color.White;
+            this.txtCep.Location = new System.Drawing.Point(51, 165);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(102, 20);
+            this.txtCep.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(12, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 18);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Complemento:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(12, 123);
+            this.label6.Location = new System.Drawing.Point(12, 164);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 18);
             this.label6.TabIndex = 10;
             this.label6.Text = "CEP:";
             // 
-            // textBox2
+            // txtCidade
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(68, 214);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtCidade.BackColor = System.Drawing.Color.White;
+            this.txtCidade.Location = new System.Drawing.Point(68, 255);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(264, 20);
+            this.txtCidade.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(14, 168);
+            this.label3.Location = new System.Drawing.Point(12, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Bairro:";
             // 
-            // textBox3
+            // txtBairro
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(68, 167);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtBairro.BackColor = System.Drawing.Color.White;
+            this.txtBairro.Location = new System.Drawing.Point(68, 208);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(264, 20);
+            this.txtBairro.TabIndex = 2;
             // 
-            // textBox1
+            // txtEstado
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(68, 255);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtEstado.BackColor = System.Drawing.Color.White;
+            this.txtEstado.Location = new System.Drawing.Point(68, 296);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(264, 20);
+            this.txtEstado.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(13, 254);
+            this.label5.Location = new System.Drawing.Point(12, 295);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 18);
             this.label5.TabIndex = 0;
@@ -442,25 +465,25 @@ namespace CadastroUIv3._0
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(13, 213);
+            this.label2.Location = new System.Drawing.Point(12, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cidade:";
             // 
-            // txtEndereco
+            // txtRua
             // 
-            this.txtEndereco.BackColor = System.Drawing.Color.White;
-            this.txtEndereco.Location = new System.Drawing.Point(51, 37);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(281, 20);
-            this.txtEndereco.TabIndex = 2;
+            this.txtRua.BackColor = System.Drawing.Color.White;
+            this.txtRua.Location = new System.Drawing.Point(51, 37);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(281, 20);
+            this.txtRua.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(14, 79);
+            this.label4.Location = new System.Drawing.Point(12, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 18);
             this.label4.TabIndex = 0;
@@ -486,9 +509,9 @@ namespace CadastroUIv3._0
             this.Controls.Add(this.lblCadAlunos);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnX);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
@@ -526,8 +549,8 @@ namespace CadastroUIv3._0
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -535,17 +558,19 @@ namespace CadastroUIv3._0
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblCadAlunos;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblEndereço;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtComplemento;
     }
 }

@@ -14,12 +14,8 @@ namespace CadastroUIv3._0
     class Conexao
     {
         //variáveis de conexão
-        public string db = "SERVER=br924.hostgator.com.br;" +
-                           "DATABASE=modain69_grupo3;" +
-                           "UID=modain69_grupo3;" +
-                           "PORT=3306;" +
-                           "PWD=grupo3;";
-
+        public string db = "SERVER=br924.hostgator.com.br; DATABASE=modain69_grupo3; UID=modain69_grupo3; PORT=3306; PWD=grupo3";
+        
         public MySqlConnection con = null;
 
         //método para abrir conexão
@@ -29,7 +25,7 @@ namespace CadastroUIv3._0
             {
                 con = new MySqlConnection(db);
                 con.Open();
-                Console.Write("Conexão aberta.");
+                Console.Write("Conexão Aberta");
             }
             catch (Exception e)
             {
@@ -44,11 +40,11 @@ namespace CadastroUIv3._0
             try
             {
                 con.Close();
-                MessageBox.Show("Conexão fechada.");
+                Console.Write("Conexão Fechada");
             }
             catch (Exception e)
             {
-                MessageBox.Show("Erro: '" + e + "' ao fechar conexão.");
+                Console.Write("Erro: '" + e + "' ao fechar conexão.");
             }
         }
     }
