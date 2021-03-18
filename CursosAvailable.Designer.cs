@@ -1,7 +1,7 @@
 ﻿
 namespace CadastroUIv3._0
 {
-    partial class Form7
+    partial class CursosAvailable
     {
         /// <summary>
         /// Required designer variable.

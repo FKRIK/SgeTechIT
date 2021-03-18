@@ -1,7 +1,7 @@
 ﻿
 namespace CadastroUIv3._0
 {
-    partial class Form2
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Required designer variable.

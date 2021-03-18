@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CadastroUIv3._0
 {
-    public partial class Form2 : Form
+    public partial class MenuPrincipal : Form
     {
-        public Form2()
+        public MenuPrincipal()
         {
             InitializeComponent();
             CustomSubmenus();
@@ -55,13 +55,13 @@ namespace CadastroUIv3._0
 
         private void BtnCadAluno_Click(object sender, EventArgs e)
         {
-            AbrirFormsInternos(new Form3()); //Linkando forms cadastro do aluno
+            AbrirFormsInternos(new CadAluno()); //Linkando forms cadastro do aluno
             EsconderSubmenus();
         }
 
         private void BtnConsAluno_Click(object sender, EventArgs e)
         {
-            AbrirFormsInternos(new Form4());//Linkar um forms aqui
+            AbrirFormsInternos(new ConsAluno());//Linkar um forms aqui
             EsconderSubmenus();
         }
 
@@ -72,13 +72,13 @@ namespace CadastroUIv3._0
 
         private void BtnCadProfessor_Click(object sender, EventArgs e)
         {
-            AbrirFormsInternos(new Form5());//Linkar um forms aqui
+            AbrirFormsInternos(new CadProfessor());//Linkar um forms aqui
             EsconderSubmenus();
         }
 
         private void BtnConsProfessor_Click(object sender, EventArgs e)
         {
-            AbrirFormsInternos(new Form6());//Linkar um forms aqui
+            AbrirFormsInternos(new ConsProfessor());//Linkar um forms aqui
             EsconderSubmenus();
         }
 
@@ -89,7 +89,7 @@ namespace CadastroUIv3._0
 
         private void BtnCursosDisp_Click(object sender, EventArgs e)
         {
-            AbrirFormsInternos(new Form7());
+            AbrirFormsInternos(new CursosAvailable());
             EsconderSubmenus();
         }
 

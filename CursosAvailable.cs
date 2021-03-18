@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CadastroUIv3._0
 {
-    public partial class Form7 : Form
+    public partial class CursosAvailable : Form
     {
-        public Form7()
+        public CursosAvailable()
         {
             InitializeComponent();
         }

@@ -11,10 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace CadastroUIv3._0
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         Conexao conexao = new Conexao();
-        public Form1()
+        public Login()
         {
             InitializeComponent(); 
         }
@@ -29,7 +29,7 @@ namespace CadastroUIv3._0
 
             if (dt.Rows.Count > 0)
             {
-                new Form2().Show();
+                new MenuPrincipal().Show();
                 this.Hide();
             }
             else
@@ -38,7 +38,9 @@ namespace CadastroUIv3._0
                 txtUserName.Clear();
                 txtSenha.Clear();
                 txtUserName.Focus();
-            }            
+            }
+            // new MenuPrincipal().Show();
+            // this.Hide();
         }
 
         private void BtnLimparcampos_Click(object sender, EventArgs e)
@@ -53,15 +55,6 @@ namespace CadastroUIv3._0
             Application.Exit();
         }
 
-        private void TxtUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         // isso é um comentario
     }
 }
