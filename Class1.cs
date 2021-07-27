@@ -14,7 +14,7 @@ namespace CadastroUIv3._0
     class Conexao
     {
         //variáveis de conexão
-        public string db = "SERVER=br924.hostgator.com.br; DATABASE=modain69_grupo3; UID=modain69_grupo3; PORT=3306; PWD=grupo3";
+        public string db = "SERVER=br924.hostgator.com.br; DATABASE=modain69_grupo3; UID=modain69_grupo3; PORT=3306; PWD=";
         
         public MySqlConnection con = null;
 
